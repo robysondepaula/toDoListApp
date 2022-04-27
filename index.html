@@ -5,16 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
-
+    <!-- Link the main.css to the index html -->
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <header>
         <h1>To do Tasks</h1>
+        <!-- Add a form to receive the task and submit it -->
         <form id="new-task-form">
-            <input type="text" id="">
+            <input type="text"
+             id="new-task-input"
+             placeholder="What you are thinking to do?"/>
+             <input type="submit" id="new-task-submit"value="Add the new task"/>
 
         </form>
     </header>
+    <main>
+        <section class="to-do-list">
+            <h2>
+                List to do
+            </h2>
+            <div class="task">
+                <!-- Div inside to div that has the task to complete seting the box readonly, so the value cannot be changed -->
+                <div clas="content">
+                    <input
+                    type="text"
+                    class="text"
+                    value="My task to complete"
+                    readonly/>
+                </div>
+                <!-- Adding buttons into div "actions" -->
+                <div class="actions">
+                    <button class="edit">Edit Task</button>
+                    <button class="dekete">Delete Task</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- Calling the javaScript into the hmlt doc -->
+<script src="main.js"></script>
 </body>
 </html>

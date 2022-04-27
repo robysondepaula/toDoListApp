@@ -1,0 +1,198 @@
+
+/* Styling the CSS document */
+
+/* Colors using in this app */
+:root{
+    --pink:#E92EFB;
+    --pinkRed:#FF2079;
+    --light:#FFFF;
+    --dark:#440bd4;
+    --darker:#04005E;
+    --darkest:#111827;
+    --greyShadows:#888888;
+
+}
+
+/* Universal Selector all elements of page customization */
+*{
+    margin:0;
+    font-family: sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body to contain the content of the app */
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Here call the var of the darkest declareted into the root */
+    background-color: var(--darkest);
+    color: #FFFF;
+
+}
+
+/* Styling the header element (To do Tasks) */
+header{
+    padding: 4rem 4rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Stylin the element into the hedar "H1" */
+header h1{
+    font-size: xx-large;
+    font-weight: 500;
+    color: var(--light);
+    margin-bottom: 1rem;
+   
+}
+
+/* Calling the new-task-form with # to style it */
+
+#new-task-form{
+    display: flex
+}
+
+/* Let button without style to customize later */
+
+input, button{
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: none;
+}
+
+/* Calling the new-task-input with # and sytle the form task to do input */
+
+#new-task-input{
+    flex:1 1 0%;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--light);
+    
+ 
+}
+
+/* Styling the placeholder using #and :: to call */
+
+#new-task-input::placeholder{
+    color:var(--greyShadows);
+    text-align: center;
+}
+
+/* Styling the button new-task-submit using # */
+
+#new-task-submit{
+    color: var(--pinkRed);
+    font-size: large;
+    font-weight: 700;
+    background-image: linear-gradient(to Let, var(--pinkRed), var(--greyShadows));
+    -webkit-background-clip: text;
+    cursor: pointer;
+    transition: 0.7s;
+    
+}
+
+/* Giving a hover and active to the task submit using : */
+/* It gives to user a better user experience */
+
+#new-task-submit:hover{
+    opacity: 0.5;
+
+}
+
+#new-task-submit:active{
+    opacity: 0.4;
+
+}
+
+/* Styling the content on main */
+main{
+    flex:1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin:0 auto;
+}
+
+/* Styling the tasks on the list to do  */
+.to-do-list{
+    padding:1rem;
+}
+
+/* H2 TO DO styling */
+.to-do-list h2{
+    font-size: x-large;
+    font-weight: 300;
+    color: var(--light);
+    margin-bottom: 2rem;
+    
+}
+
+/* Styling into tasks the display */
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark);
+    padding: 1.4rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+
+}
+/* Style the tasks inside the block */
+#tasks .task .content .text{
+    color:var(--light);
+    font-size: 1.5rem;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+/* Style the read only text */
+
+#tasks .task .content .text:not(:read-only){
+    color:var(--pink);
+}
+
+/* Style the elements inside actions */
+#tasks .task .actions{
+    display: flex;
+    margin:0 -0.5rem;
+}
+
+/* Style buttons edit and delete */
+.task .actions button{
+    cursor:pointer;
+    margin:0 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+/* Adding the hover for buttons */
+.task .actions button:hover{
+    opacity: 0.5;
+}
+
+/* Adding the active for buttons */
+.task .actions button:active{
+    opacity: 0.4;
+}
+
+/* Style edit button */
+
+.task .actions .edit{
+    background-image: linear-gradient(to left, var(--greyShadows), var(--light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bolder;
+}
+
+.task .actions .delete{
+   color:rgb(242, 10, 56);
+   font-weight: bolder;
+}

@@ -143,6 +143,10 @@ main{
     margin-bottom: 1rem;
 
 }
+
+#tasks .task .content .text{
+    flex:1 1 0%;
+}
 /* Style the tasks inside the block */
 #tasks .task .content .text{
     color:var(--light);
